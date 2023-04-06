@@ -1,5 +1,6 @@
 
-**Steps to build **<br>
+**Steps to build**<br>
+
 Inside CSE-506<br>
 Run: sudo make<br>
 Run: sudo sh install_module.sh<br>
@@ -16,9 +17,9 @@ Job types supported by the work queue:
 Job types usage and description—
 
 1. Delete multiple files
-	
+
 	Usage: ./async_ops delete -n N -i file1 file2.. fileN
-	
+
 	Flags:
 		-n: number of files
 		-i: the files to be deleted
@@ -26,7 +27,7 @@ Job types usage and description—
 	This command will delete all the files provided by the user or returns an appropriate error.
 
 2. Rename multiple files
-	
+
 	Usage: ./async_ops rename -n N -i file1 file2.. fileN -o output1 output2.. outputN
 
 	Flags:
@@ -47,7 +48,7 @@ This command will rename the files to the file names given by the user after the
 This command will concatenate the files and store the content in the output file. If any of the input files does not exist, the operation fails and no output file is created.
 
 4. Getting the stat of  multiple files
-	
+
 	Usage: ./async_ops stat -n N -i file1 file2.. fileN -o output1 output2.. outputN
 
 	Flags:
@@ -88,7 +89,7 @@ This command will compress/decompress the content present in file1.txt and store
 
 -----
 
-**Kernel Queue APIs supported** 
+**Kernel Queue APIs supported**
 
 1. Submitting a job
 
@@ -163,13 +164,6 @@ This command will compress/decompress the content present in file1.txt and store
 ALL the above APIs have user id filtering, ie. only jobs owned by user are visible to them in return responses of all APIs.
 
 -----
-
-**Future Developments**
-
-1. We plan to introduce submitting jobs using shell script (Slurm standard). This method could be used to automate job submission and timer activities.
-2. We plan to provide a time analytics API which will contain lifetime information of a job — Time spent in pending state on queue, time on CPU, total time it took to reach COMPLETED state etc. This API can be used to increase system efficiency.
-
-----
 
 **References**
 
